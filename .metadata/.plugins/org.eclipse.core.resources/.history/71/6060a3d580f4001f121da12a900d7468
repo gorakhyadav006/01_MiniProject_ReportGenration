@@ -1,0 +1,13 @@
+package com.insureance;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class O1ReportAppApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(O1ReportAppApplication.class, args);
+	}
+
+}

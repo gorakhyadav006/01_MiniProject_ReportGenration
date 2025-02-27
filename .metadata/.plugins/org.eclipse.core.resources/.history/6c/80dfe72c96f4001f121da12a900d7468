@@ -1,0 +1,28 @@
+package com.insureance.service;
+
+import java.util.List;
+
+import com.insureance.entity.CitizenPlan;
+
+public interface ReportService {
+
+	public List<CitizenPlan> getByPlanName();
+	
+	public List<CitizenPlan> getByPlanStatus();
+
+	public List<CitizenPlan> getByGender();
+
+	public List<CitizenPlan> getByStartDate();
+
+	public List<CitizenPlan> getByEndDate();
+
+	public List<CitizenPlan> getAllCitizenData();
+	
+	
+	public List<String> getPlanName();
+	public List<CitizenPlan> getPlanStatus();
+	
+	
+	
+
+}

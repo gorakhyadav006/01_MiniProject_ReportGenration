@@ -1,0 +1,5 @@
+package com.insureance.service;
+
+public interface ReportService {
+
+}

@@ -1,0 +1,46 @@
+package com.insureance.runner;
+
+import java.time.LocalDate;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.ApplicationArguments;
+import org.springframework.boot.ApplicationRunner;
+import org.springframework.stereotype.Component;
+
+import com.insureance.entity.CitizenPlan;
+import com.insureance.repo.CitizenPlanReository;
+
+@Component
+public class DataLoader implements ApplicationRunner {
+
+	@Autowired
+	private CitizenPlanReository repo;
+	
+	@Override
+	public void run(ApplicationArguments args) throws Exception {
+		
+		//Cash Plan Data 
+		
+		CitizenPlan cl = new CitizenPlan();
+		cl.setCitizenName("Jhon");
+		cl.setGender("Male");
+		cl.setPlanName("Cash");
+		cl.setPlanStatus("Approved");
+		cl.setPlanStartDate(LocalDate.now());
+		cl.setPlanEndDate(LocalDate.now().plusMonths(6));
+		cl.setBenefitAmt(50000.00);
+		
+		//Cash Plan with Denial Data
+		
+		CitizenPlan c2 = new CitizenPlan();
+		c2.setCitizenName("Smith");
+		c2.setGender("Male");
+		c2.setPlanName("Cash");
+		c2.setPlanStatus("Denied");
+		c2.setPlanStartDate(LocalDate.now());
+		c2.setPlanEndDate(LocalDate.now().plusMonths(6));
+		c2.setDenialReason("Rental Income");
+	
+	}
+
+}

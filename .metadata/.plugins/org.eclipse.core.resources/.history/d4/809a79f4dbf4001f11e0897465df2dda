@@ -1,0 +1,86 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Customer Registration Form</title>
+
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0px 0px 10px 0px #ccc;
+            border-radius: 10px;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .btn {
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: #218838;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            let name = document.forms["customerForm"]["custName"].value;
+            let email = document.forms["customerForm"]["custEmail"].value;
+            let phone = document.forms["customerForm"]["custMob"].value;
+            let gender = document.forms["customerForm"]["gender"].value;
+            let startDate = document.forms["customerForm"]["startDate"].value;
+            let endDate = document.forms["customerForm"]["endDate"].value;
+            let errorMsg = "";
+
+            if (name.length < 2 || name.length > 50) {
+                errorMsg += "Name must be between 2 and 50 characters.\n";
+            }
+            let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            if (!emailPattern.test(email)) {
+                errorMsg += "Invalid email format.\n";
+            }
+            if (phone.length !== 10 || isNaN(phone)) {
+                errorMsg += "Invalid mobile number (must be 10 digits).\n";
+            }
+            if (gender === "") {
+                errorMsg += "Please select a gender.\n";
+            }
+            if (new Date(startDate) >= new Date(endDate)) {
+                errorMsg += "End date must be after start date.\n";
+            }
+            if (errorMsg !== "") {
+                alert(errorMsg);
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+</head>
+<body>
+<h1>Heiiii</h1>
+</body>
+</html>
