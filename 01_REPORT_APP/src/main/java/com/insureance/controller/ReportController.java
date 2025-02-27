@@ -20,7 +20,9 @@ public class ReportController {
 //	
 	@GetMapping("/")
 	public String searchPage() {
+		System.out.println("fdsafdsa");
 		return "search";
+		
 	}
 	
 }
