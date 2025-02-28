@@ -1,5 +1,0 @@
-package com.insureance.repo;
-
-public interface CitizenPlanReository {
-
-}

@@ -1,6 +1,6 @@
 content_assist_completion_replacement_background=200,200,0
 content_assist_completion_replacement_foreground=194,0,0
-content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="com.insureance.entity.CitizenPlan"><rhs name\="com.insureance.entity.CitizenPlan"/></lhs><lhs name\="java.time.temporal.Temporal"><rhs name\="java.time.LocalDate"/></lhs><lhs name\="java.time.temporal.TemporalAccessor"><rhs name\="java.time.LocalDate"/></lhs><lhs name\="java.time.temporal.TemporalAdjuster"><rhs name\="java.time.LocalDate"/></lhs><lhs name\="java.time.chrono.ChronoLocalDate"><rhs name\="java.time.LocalDate"/></lhs></history>
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="com.insureance.entity.CitizenPlan"><rhs name\="com.insureance.entity.CitizenPlan"/></lhs><lhs name\="java.time.temporal.Temporal"><rhs name\="java.time.LocalDate"/></lhs><lhs name\="java.time.temporal.TemporalAccessor"><rhs name\="java.time.LocalDate"/></lhs><lhs name\="java.time.temporal.TemporalAdjuster"><rhs name\="java.time.LocalDate"/></lhs><lhs name\="java.time.chrono.ChronoLocalDate"><rhs name\="java.time.LocalDate"/></lhs><lhs name\="com.insureance.request.SearchRequest"><rhs name\="com.insureance.request.SearchRequest"/></lhs></history>
 content_assist_number_of_computers=18
 content_assist_parameters_background=48,54,59
 content_assist_parameters_foreground=235,237,239
