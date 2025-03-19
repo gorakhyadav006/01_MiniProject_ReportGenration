@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+<title>Kreate Unlock Form</title>
+<link rel="stylesheet" href="style.css">
+
+ <!--  <script>
+        // Function to get query parameters
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Display email ID in the HTML
+        window.onload = function () {
+            const email = getQueryParam("email"); // Get 'email' parameter from URL
+            if (email) {
+                document.getElementById("emailDisplay").textContent = email;
+            } else {
+                document.getElementById("emailDisplay").textContent = "No email found";
+            }
+        };
+    </script>-->
+
+</head>
+
+<body>
+	<div class="main">
+		
+		<h1>Unlock Your Account</h1>
+            
+             <p th:if="${pwdsameMsg}" th:text="${pwdsameMsg}" class="text-danger"></p>
+             
+             <p th:if="${accUnlockMsg}" th:text="${accUnlockMsg}" class="text-success"></p>
+             
+             <p th:if="${accerrorMsg}" th:text="${accerrorMsg}" class="text-danger"></p>
+             
+             
+            <form th:action="@{/unlock}" th:object="${unlock}" method="POST">
+            
+            <div>
+            <h5>Email ID: </h5><p><strong th:text="${unlock.email}"></strong></p>
+            <input type="hidden" th:field="${unlock.email}"/>
+            </div>
+            
+			<label for="first"> Enter Temporary Password: </label> <input
+				type="password" id="first" name="first" placeholder="Temp Password" th:field="*{tempPwd}" 
+				required>
+				
+				 <label for="second"> Enter New Password: </label>
+			<input type="password" id="second" name="second"
+				placeholder="Password" th:field="*{currentPwd}" required> 
+				 
+				<label for="third">
+				Confirm Password: </label> <input type="password" id="third" name="third"
+				placeholder="Confirm Password" th:field="*{confirmPwd}" required>
+
+			<div class="wrap">
+			<!-- <input type="submit" value="Unlock"> -->
+				<button type="submit">Submit</button>
+			</div>
+		</form>
+
+		<p>
+			Login your Account : <a href="/login" style="text-decoration: none;">
+				Login Your Account </a>
+		</p>
+
+	</div>
+</body>
+
+</html>

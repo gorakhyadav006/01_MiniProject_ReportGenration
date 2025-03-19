@@ -2,6 +2,7 @@ package com.insureance.service;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletResponse;
 import com.insureance.entity.CitizenPlan;
 import com.insureance.request.SearchRequest;
 
@@ -20,11 +21,13 @@ public interface ReportService {
 	
 	//4.Method to export data to pdf file
 	
-	public boolean exportPdf();
+	public boolean exportPdf(HttpServletResponse response) throws Exception;
 	
 	//5.Method to export data to excel file
 	
-	public boolean exportExcel();
+	public boolean exportExcel(HttpServletResponse response) throws Exception;
+	
+
 	
 	
 	

@@ -7,11 +7,11 @@ import javax.persistence.*;
 import lombok.Data;
 
 @Data
-@javax.persistence.Entity
+@Entity
 @Table(name = "CITIZEN_PLANS_INFO")
 public class CitizenPlan {
 	
-	@javax.persistence.Id
+	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer citizenId;
 	private String citizenName;

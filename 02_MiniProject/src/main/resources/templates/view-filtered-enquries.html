@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>View Enquiries</title>
+<style>
+footer {
+	text-align: center;
+	padding: 3px;
+	background-color: DarkSalmon;
+	color: white;
+}
+</style>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+
+</head>
+
+<body>
+	
+
+	<div class="main">
+			
+		<div id="filterresulttable">
+			<table id="filterTable" class="table table-striped table-hover">
+				<tr>
+					<th>ID</th>
+					<th>Student Name</th>
+					<th>Class Mode</th>
+					<th>Course Name</th>
+					<th>Phone No</th>
+					<th>Enq Status</th>
+					<th>Action</th>
+				</tr>
+				<tr th:each="enqury, enquryStat : ${enquries}">
+					<td th:text="${enquryStat.index + 1}"></td>
+					<td th:text="${enqury.studentName}"></td>
+					<td th:text="${enqury.classMode}"></td>
+					<td th:text="${enqury.courseName}"></td>
+					<td th:text="${enqury.studentPhno}"></td>
+					<td th:text="${enqury.enqStatus}"></td>
+					<td><a th:href="@{/edit}">Edit</a></td>
+				</tr>
+			</table>
+		 </div>	
+		</div>
+		<div th:if="${#lists.isEmpty(enquries)}">
+			<h3>No Records Found, thanks ......</h3>
+		</div>
+	
+	
+</body>
+</html>

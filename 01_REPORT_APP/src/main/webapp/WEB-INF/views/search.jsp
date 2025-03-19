@@ -112,7 +112,7 @@
 			
 		<hr/>
 		
-		Export: <a href="">Excel</a> <a href="">Pdf</a>
+		Export: <a  href="excel">ImportToExcel</a> <h1></h1><a href="pdf">ImportToPdf</a>
 		
 	</div>
 	<script
